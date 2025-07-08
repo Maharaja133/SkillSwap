@@ -16,7 +16,7 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://skill-swap-eight-blue.vercel.app/'
+  'https://skill-swap-brab2ppvf-maharaja-prabhus-projects.vercel.app/'
 ];
 
 const corsOptions = {
