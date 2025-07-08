@@ -16,15 +16,15 @@ const app = express();
 
 const allowedOrigins = [
   'http://localhost:5173',
-  'https://skill-swap-brab2ppvf-maharaja-prabhus-projects.vercel.app'
+  process.env.CLIENT_URL
 ];
-
 
 const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || allowedOrigins.includes(origin)) {
       callback(null, true);
     } else {
+      console.error("Blocked by CORS:", origin);
       callback(new Error('Not allowed by CORS'));
     }
   },
