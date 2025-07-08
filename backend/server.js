@@ -15,10 +15,9 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  origin: 'https://skill-swap-ff3swtezk-maharaja-prabhus-projects.vercel.app/', 
+  origin: process.env.CLIENT_URL,
   credentials: true,
 }));
-
 
 app.use(express.json());
 
