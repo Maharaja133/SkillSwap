@@ -14,8 +14,6 @@ dotenv.config();
 
 const app = express();
 
-app.use(express.json());
-
 const allowedOrigins = [
   'http://localhost:5173',
   'https://skill-swap-eight-blue.vercel.app/'
@@ -35,6 +33,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 
+app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
